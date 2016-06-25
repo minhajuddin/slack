@@ -12,6 +12,7 @@ defmodule Slack do
       supervisor(Slack.Repo, []),
       # Start the endpoint when the application starts
       supervisor(Slack.Endpoint, []),
+      supervisor(Slack.BlockedUsers, []),
       # Start your own worker by calling: Slack.Worker.start_link(arg1, arg2, arg3)
       # worker(Slack.Worker, [arg1, arg2, arg3]),
     ]
